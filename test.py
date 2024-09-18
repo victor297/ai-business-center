@@ -44,7 +44,7 @@ def place_order():
                 if product not in st.session_state.selected_products:
                     st.session_state.selected_products.append(product)
         with col3:
-            st.write(f"${product['price']}")
+            st.write(f"₦{product['price']}")
     
     if st.session_state.selected_products:
         st.write("Selected Products:")
