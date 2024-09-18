@@ -50,7 +50,7 @@ def place_order():
         st.write("Selected Products:")
         for product in st.session_state.selected_products:
             st.image(product["image"], width=100)  # Small image
-            st.write(f"{product['title']} - ${product['price']}")
+            st.write(f"{product['title']} - ₦{product['price']}")
         
         if st.button("Proceed with Purchase"):
             st.session_state.action = "collect_address"
