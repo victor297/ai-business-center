@@ -60,11 +60,12 @@ def place_order():
 def collect_address():
     st.subheader("Delivery Address")
     address = st.text_input("Enter your delivery address")
+    number = st.text_input("Enter your phone number")
     
     if st.button("Proceed with Purchase"):
         if address:
             order_id = random.randint(1000, 9999)  # Simulating order ID
-            st.write(f"Order purchased successfully! Your order ID is {order_id}. Check your email for details.")
+            st.write(f"Order purchased successfully! Your order ID is {order_id}.")
             st.session_state.selected_products = []
             st.session_state.action = None
         else:
